@@ -1,6 +1,8 @@
 #include "Student.h"
 
 class Menager {
+
+
 public:
 
 	double calculateAvgMark(Student* student) {

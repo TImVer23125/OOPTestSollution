@@ -5,6 +5,7 @@ using namespace std;
 
 class Student {
 public:
+
 	string name;
 	int age;
 	//double mark;
@@ -62,6 +63,16 @@ public:
 			count = 0;
 		}
 	}
+
+	string Getname() {
+		return name;
+	}
+
+	void setName(string nm) {
+		name nm;
+	}
+
+
 
 	string toString() {
 		string s = "";
