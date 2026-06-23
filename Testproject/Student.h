@@ -4,7 +4,7 @@
 using namespace std;
 
 class Student {
-public:
+private:
 
 	string name;
 	int age;
@@ -25,6 +25,9 @@ public:
 		gender = '\0';
 	}
 
+public:
+
+
 	Student(string nm, int ag) {
 		cout << "Student constructor with arguments\n";
 		name = nm;
@@ -36,7 +39,7 @@ public:
 		gender = '\0';
 	}
 
-	Student(string nm, int ag, char gndr,bool a,int* mrks, int cnt) {
+	Student(string nm, int ag, char gndr, bool a, int* mrks, int cnt) {
 		cout << "Student canonical constructor\n";
 		name = nm;
 		age = ag;
@@ -64,21 +67,67 @@ public:
 		}
 	}
 
-	string Getname() {
+	string getName() {
 		return name;
 	}
 
 	void setName(string nm) {
-		name nm;
+		name = nm;
 	}
 
+	int getAge() {
+		return age;
+	}
 
+	void setAge(int a) {
+		if (a > 0)
+		{
+			age = a;
+		}
+	}
+
+	char getGender() {
+		return gender;
+	}
+
+	void setGender(char g) {
+		if (gender == 'm' || gender == 'f') {
+			gender = g;
+		}
+	}
+
+	bool isAlive() {
+		return alive;
+	}
+
+	void setAlive(bool a) {
+		alive = a;
+	}
+
+	int getCountMark() {
+		return count;
+	}
+
+	int* getMarks() {
+		return marks;
+	}
+
+	void setMarks(int* m, int c) {
+		if (c > 0 && m != nullptr) {
+			if (marks != nullptr) {
+				delete[] marks;
+
+			}
+			marks = m;
+			count = c;
+		}
+	}
 
 	string toString() {
 		string s = "";
 
 		string mrks = "";
-		
+
 		for (int i = 0; i < count; i++)
 		{
 			mrks += to_string(*(marks + i)) + " ";

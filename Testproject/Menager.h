@@ -1,22 +1,18 @@
 #include "Student.h"
 
 class Menager {
-
-
-public:
-
+private:
 	double calculateAvgMark(Student* student) {
 		double s = 0;
 
-		for (int i = 0; i < student->count; i++) {
+		for (int i = 0; i < student->getCountMark(); i++) {
 
-			s += student->marks[i];
+			s += student->getMarks()[i];
 
 		}
-		return s / student->count;
+		return s / student->getCountMark();
 	}
-
-
+public:
 	double calculateAvgMark(Student** list, int count) {
 		double sum = 0;
 
