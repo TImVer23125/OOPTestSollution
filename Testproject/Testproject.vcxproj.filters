@@ -59,5 +59,8 @@
     <ClCompile Include="Group.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="main10.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
