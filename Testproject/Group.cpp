@@ -18,7 +18,20 @@ Group::Group(string nm, Student** ls, int c) {
 	}
 
 }
-//Group(const Group* group);
+Group::Group(const Group* group) {
+	cout << "Group copy-constructor\n";
+
+	count = group->count;
+	name = group->name;
+
+	list = new Student * [group->count];
+
+	for (int i = 0; i < group->count; i++) {
+		list[i] = group->list[i];
+	}
+
+}
+
 Group::~Group() {
 	if (count > 0 && list != nullptr) {
 		count = 0;
