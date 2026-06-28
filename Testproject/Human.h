@@ -3,28 +3,28 @@
 
 using namespace std;
 
-class Student {
-private:
+class Human
+{
+
+protected:
 	string name;
 	int age;
-	//double mark;
 	char gender;
 	bool alive;
-	int* marks;
-	int count;
+
 
 public:
 
-	Student();
+	Human();
 
-	Student(string name, int age);
-	Student(int age, string name);
+	Human(string name, int age);
+	Human(int age, string name);
 
-	Student(string name, int age, char gender, bool alive, int* marks, int count);
+	Human(string name, int age, char gender, bool alive);
 
-	Student(const Student* student);
+	Human(const Human* human);
 
-	~Student();
+	~Human();
 
 	string getName();
 	void setName(string name);
@@ -40,3 +40,4 @@ public:
 
 	string toString();
 };
+
